@@ -1,0 +1,179 @@
+:root {
+    --clr-nu-db: hsl(234, 12%, 34%);
+    --clr-nu-gb: hsl(229, 6%, 66%);
+    --clr-nu-lg: hsl(0, 0%, 98%);
+
+    --clr-red: hsl(0, 78%, 62%);
+    --clr-cyan: hsl(180, 62%, 55%);
+    --clr-orange: hsl(34, 97%, 64%);
+    --clr-blue: hsl(212, 86%, 64%);
+
+
+    --ff-sans: 'Poppins', sans-serif;
+
+    --fw-light: 200; 
+    --fw-nrml: 400;
+    --fw-bold: 600;
+
+    --fs-base: 0.938rem;
+    --fs-nrml: 1.25rem;    
+    --fs-lg: 1.625rem;
+    --fs-2xl: 2.5rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    line-height: calc(1em + 0.5rem);
+    /* font: inherit; */
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+    color: var(--clr-nu-gb);
+    font-weight: var(--fw-nrml);
+}
+
+body {
+
+    font-family: var(--ff-sans);
+    text-rendering: optimizeSpeed;
+    padding-block-end: 5rem;
+}
+
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+img,
+picture,
+svg,
+canvas {
+    max-width: 100%;
+    display: block;
+    user-select: none;
+}
+
+button {
+    display: inline-block;
+    padding: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+/*Styling starts here*/
+
+/* mainly header class */
+
+h1,
+h2,
+h3 {
+    color: var(--clr-nu-db);
+    line-height: 1.2;
+}
+
+p {
+    padding: 01rem 0;
+}
+span {
+    font-weight: var(--fw-light);
+    font-kerning: normal;
+}
+
+.wrapper {
+    max-width: 1200px;
+    margin-inline: auto;
+    padding-inline: 1rem;
+}
+
+.wrapper__narrow {
+    max-width: 550px;
+}
+
+.header {
+    text-align: center;
+    margin-block: 5rem;
+}
+
+/* styling main area */
+
+.layout {
+    display: flex;
+    gap: 2rem;
+}
+
+.col {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card  {
+    font-size: var(--fs-base);
+    background-color: var(--clr-nu-lg);
+    padding: 2rem;
+    height: 20em;
+    border-radius: 2.5%;
+    
+}
+
+.card img {
+    display: block;
+    margin-left: auto;
+    margin-top: 4rem;
+
+}
+
+.card1 {
+    border-top: 5px solid var(--clr-cyan);
+}
+.card2 {
+    border-top: 5px solid var(--clr-red);
+}
+.card3 {
+    margin-top: 2rem;
+    border-top: 5px solid var(--clr-orange);
+}
+.card4 {
+    border-top: 5px solid var(--clr-blue);
+}
+
+
+.card {
+    box-shadow: 0 0.8rem 1.5rem -0.7rem hsl(212, 63%, 74%);
+}
+
+
+
+
+@media (max-width: 1200px) {
+    
+
+    
+    .wrapper{
+        padding-inline: 3rem;
+        
+    }
+
+    .layout {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        /* max-width: 500px; */
+    }
+
+
+}
